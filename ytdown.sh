@@ -25,7 +25,7 @@ NOTE
 if [ "$#" -ne 5 ]; then
 	echo "Usage: ytdown <video url> <audio url> <name> <upload date> <video id>"
 	echo "Tip: "
-	echo "[1] The video url normally bigger size or itag=243, while audio url is smaller size or itag=251. You can quickly recognize the url by checking the filter by Media tab in network inspector,  then sort by file size and right-click to copy the biggest and smallest size url, OR double click the url to see it's video or audio(only first two links works)."
+	echo "[1] The video url normally bigger size or itag=243/247, while audio url is smaller size or itag=251. You can quickly recognize the url by checking the filter by Media tab in network inspector,  then sort by file size and right-click to copy the biggest and smallest size url(but don't copy too small size in Bytes which neither audio nor video url), OR double click the url to see it's video or audio(only first two links works)."
 	echo "[2] You choose highest quality on video settings first, click trash icon to clear inspector log, then get the latest/highest quaility media url by dragging the duration bar."
 	echo "[3] The order of <video url> and <audio url> not important."
 	exit 1
@@ -34,6 +34,7 @@ fi
 function download_yt_va_only() {
 	echo 'start again'
     	#>"$yt_list_f" #ffmpeg
+	>"$2" #ffmpeg disable this #nid this to prevent append prev abort file.
 	#tmpdir=$(mktemp -d mscript.XXXXXXXXXX) #ffmpeg
 	#The download speed of this fixed lenght 7500000 is normal speed(fast) to download compare to range=0- or remove range=x-xx
 	#, while the cons is bigger size in temporary file size, but final output file will same.
