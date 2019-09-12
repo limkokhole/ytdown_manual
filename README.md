@@ -13,7 +13,7 @@ Download Youtube manually, a temporary workaround before your downloader such as
 
 ### Why not just use `&range=0-` or remove `&range=` ?:
 
-    Download as chunk of segments required to keep the initial fast download speed, or else it probably drop to very slow speed.
+Download as chunk of segments required to keep the initial fast download speed, or else it probably drop to very slow speed.
 
 ### Command alias:
 
