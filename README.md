@@ -20,3 +20,7 @@ Download as chunk of segments required to keep the initial fast download speed, 
 You probably want to make it as alias in ~/.bash_aliases, e.g.:
 
     alias ytdown='bash ~/n/sh/ytdown_manual/ytdown.sh'
+
+### Demo video (Click image to play at YouTube):
+
+[![watch in youtube](https://i.ytimg.com/vi/M2qlShbm2os/hqdefault.jpg)](https://www.youtube.com/watch?v=M2qlShbm2os "ytdown manual")
